@@ -1,6 +1,7 @@
 import React from 'react';
 import Search from './Search';
 import Wander from './Wander.png';
+import Post from './Post';
 
 function Home({search, setSearch}) {
     
@@ -10,6 +11,7 @@ function Home({search, setSearch}) {
         <div className='search_div' div>
             <h2>Start your journey!</h2>
             <Search search={search} setSearch={setSearch}  />
+            <Post/>
         
         </div>   
         </div>

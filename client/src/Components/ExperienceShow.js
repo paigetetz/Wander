@@ -1,8 +1,9 @@
 
 import React, {useEffect, useState} from 'react';
 import { useParams } from 'react-router-dom';
-import Post from './Post';
-function ExperienceShow() {
+import PostsContainer from './PostsContainer';
+import {Link} from "react-router-dom"
+function ExperienceShow({user}) {
     const {id} = useParams();
 
     const [experience, setExperience] = useState([]);
@@ -24,9 +25,10 @@ function ExperienceShow() {
                 <h5>${experience.price}</h5>
                 <h2>{experience.likes} Likes</h2>
                 <p>{experience.description}</p>
+            
                 
             </div>
-    
+        <Link to={`/experience/experience/${experience.id}`}><PostsContainer user={user}/></Link>
         </div>
     );
 }
