@@ -1,6 +1,7 @@
 
 import React, {useEffect, useState} from 'react';
 import { useParams } from 'react-router-dom';
+import Post from './Post';
 function ExperienceShow() {
     const {id} = useParams();
 
@@ -23,7 +24,9 @@ function ExperienceShow() {
                 <h5>${experience.price}</h5>
                 <h2>{experience.likes} Likes</h2>
                 <p>{experience.description}</p>
+                
             </div>
+    
         </div>
     );
 }

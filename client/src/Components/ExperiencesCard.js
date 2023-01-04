@@ -20,13 +20,13 @@ function ExperiencesCard({experience, onDelete}) {
         }))
     }
 
-    // function handleDelete(id){
-    //     onDelete(id)
-    //     fetch(`experiences/${id}`,{
-    //         method: 'DELETE',
-    //         headers,
-    //     })
-    // }
+    function handleDelete(id){
+        onDelete(id)
+        fetch(`experiences/${id}`,{
+            method: 'DELETE',
+            headers,
+        })
+    }
 
     return ( 
         <>
@@ -59,7 +59,7 @@ function ExperiencesCard({experience, onDelete}) {
     <button>More Info</button>
     </Link>
     <button onClick={()=>updateLikes(experienceData)}>Like</button>
-    {/* <button onClick={()=>handleDelete(experienceData.id)}>Delete</button> */}
+    <button onClick={()=>handleDelete(experienceData.id)}>Delete</button>
     
     
 

@@ -3,10 +3,10 @@ import {Link} from "react-router-dom"
 
 function Search({search, setSearch}) {
 
-  function handleSubmit(e) {
-    e.preventDefault();
-    search(setSearch);
-  }
+  // function handleSubmit(e) {
+  //   e.preventDefault();
+  //   search(setSearch);
+  // }
     return (
         <div>
         <input

@@ -10,6 +10,7 @@ import ExperiencesContainer from './Components/ExperiencesContainer';
 import CreateExperience from './Components/CreateExperience';
 import NotFound from './Components/NotFound';
 import LogoutPage from './Components/LogoutPage';
+import PostsContainer from './Components/PostsContainer';
 
 
 function App() {
@@ -23,7 +24,7 @@ function App() {
       const response1 = await fetch('/me');
       const user = await response1.json();
       setUser(user);
-      // console.log(user);
+      console.log(user);
       const response2 = await fetch('/experiences');
       const experiences = await response2.json();
       setExperiences(experiences);
@@ -38,13 +39,6 @@ function App() {
     const updateExperienceArray = experiences.filter(experience => experience.id !== id)
     setExperiences(updateExperienceArray)
   }
-
-  // useEffect(()=>{
-  //   fetch("/me")
-  //   .then(response => response.json())
-  //   .then(data => console.log(data))
-  // },[])
-
 
 
 
@@ -62,6 +56,7 @@ function App() {
         <Route path="/experience/experience/:id" element= {<ExperienceShow />}/>  
         <Route path="/create-experience" element= {<CreateExperience experiencesData={experiences} setExperiencesData={setExperiences} />}/> 
         <Route path="/logout" element={<LogoutPage user={user} setUser = {setUser}/>}/>
+        <Route path="/myposts" element={<PostsContainer user={user}/>}/>
         <Route path="*" element={<NotFound />} />
 
         

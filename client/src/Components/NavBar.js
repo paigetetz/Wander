@@ -6,7 +6,7 @@ import {NavLink} from 'react-router-dom';
 function NavBar({user}) {
 
   // const [loggedIn, setLoggedIn] = useState(true);
-  console.log(user)
+  // console.log(user)
   
     return (
       <>
@@ -23,8 +23,9 @@ function NavBar({user}) {
       <nav className='navMenu'>
         <NavLink className="button" to="/">Home</NavLink>
         <NavLink className="button" to="/experience">Experiences</NavLink>
-        {/* <NavLink className="button" to="/create-experience"> Create Experience</NavLink> */}
+        <NavLink className="button" to="/create-experience"> Create Experience</NavLink>
         <NavLink className="button" to="/signup">Sign Up</NavLink>
+        <NavLink className="button" to="/myposts"> My Posts</NavLink>
         <NavLink className="button" to="/userlogin">Login</NavLink>
         <NavLink className="button" to="/logout">Logout</NavLink>
         <div className="dot"></div>
