@@ -10,7 +10,7 @@ function CommentForm() {
     const [formData, setFormData] = useState(initialFormState);
     const handleSubmit = (e) => {
         e.preventDefault()
-        fetch(`/experiences/${user.posts.id}`, {
+        fetch(`/posts`, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(formData)
